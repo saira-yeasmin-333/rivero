@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Watcher24</string>
+    <string-array name="country">
+        <item>Bangladesh</item>
+        <item>United States</item>
+        <item>Malaysia</item>
+        <item>India</item>
+    </string-array>
+</resources>

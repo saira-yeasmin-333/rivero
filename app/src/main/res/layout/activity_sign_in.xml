@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:padding="24dp"
+    android:scrollbars="none"
+    tools:context=".SignInActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Welcome Back"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Login To Continue"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"/>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="100dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/sign_in_2_gif"
+            android:layout_height="90dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/inputEmail_in"
+            android:layout_marginTop="40dp"
+            android:hint="Email"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#212121"
+            android:textSize="13sp"
+            android:background="@drawable/background_input"
+            android:layout_height="45dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/inputPassword_in"
+            android:layout_marginTop="16dp"
+            android:hint="password"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#212121"
+            android:textSize="13sp"
+            android:background="@drawable/background_input"
+            android:layout_height="45dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:id="@+id/buttonSignIn"
+                android:text="Sign In"
+                android:backgroundTint="#081929"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                android:layout_height="50dp"/>
+            <ProgressBar
+                android:layout_width="25dp"
+                android:id="@+id/progressBar_in"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_height="25dp"/>
+
+        </FrameLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/textCreateNewAccount"
+            android:layout_marginTop="30dp"
+            android:text="Create New Account"
+            android:textColor="#212121"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

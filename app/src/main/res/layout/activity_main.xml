@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#081929"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/earthGif"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/imageProfile"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/profile"
+            android:background="#20FFFFFF"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="8dp"
+            android:layout_height="30dp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#20FFFFFF"
+            android:padding="6dp"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            android:id="@+id/imageSignOut"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/textName_main"
+            app:layout_constraintBottom_toBottomOf="@id/imageProfile"
+            app:layout_constraintEnd_toStartOf="@+id/imageSignOut"
+            app:layout_constraintStart_toEndOf="@id/imageProfile"
+            app:layout_constraintTop_toTopOf="@+id/imageProfile"
+            android:layout_height="wrap_content"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+
+        android:id="@+id/earthGif"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/giphy"
+        app:layout_constraintBottom_toTopOf="@+id/savedcountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <TextView
+        android:id="@+id/savedcountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Countries"
+        android:textAlignment="center"
+        android:textColor="#FFC800"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/earthGif" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:id="@+id/countrylist"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:backgroundTint="#081929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savedcountry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addcountry"
+        android:layout_width="65dp"
+        android:layout_height="60dp"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countrylist"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFC800"
+        app:iconGravity="start"
+        app:icon="@drawable/round"
+       />
+</androidx.constraintlayout.widget.ConstraintLayout>
